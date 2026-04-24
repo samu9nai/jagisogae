@@ -102,7 +102,6 @@
       .section h2 {
         color: #0f766e;
         font-size: 0.9rem;
-        letter-spacing: 0;
         margin-bottom: 12px;
       }
 
@@ -128,12 +127,12 @@
         border: 1px solid #d8e0e8;
       }
 
-      .tag:nth-child(2n) {
+      .tag--green {
         background: #e7f5ef;
         color: #0f5f54;
       }
 
-      .tag:nth-child(3n) {
+      .tag--yellow {
         background: #fff4db;
         color: #8a5a00;
       }
@@ -190,6 +189,8 @@
             class="avatar"
             src="https://avatars.githubusercontent.com/u/62879448?v=4"
             alt="정민규 GitHub 프로필 이미지"
+            loading="lazy"
+            onerror="this.style.background = '#2d6a4f'"
           />
           <h1>정민규</h1>
           <p class="role">Backend Developer</p>
@@ -224,11 +225,11 @@
           <h2>관심 분야</h2>
           <div class="tags">
             <span class="tag">API Design</span>
-            <span class="tag">Database</span>
-            <span class="tag">Spring</span>
+            <span class="tag tag--green">Database</span>
+            <span class="tag tag--yellow">Spring</span>
             <span class="tag">Node.js</span>
-            <span class="tag">Performance</span>
-            <span class="tag">Clean Code</span>
+            <span class="tag tag--green">Performance</span>
+            <span class="tag tag--yellow">Clean Code</span>
           </div>
         </div>
 
