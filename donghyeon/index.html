@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자기소개</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 2rem;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin: 0 auto 1rem;
+    }
+
+    .card-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-header p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 1.6rem;
+    }
+
+    .section h2 {
+      font-size: 1rem;
+      color: #764ba2;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6rem;
+      border-bottom: 2px solid #e8d5f5;
+      padding-bottom: 0.3rem;
+    }
+
+    .section p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: #ede9fe;
+      color: #5b21b6;
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .contact-list li {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .contact-list a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="avatar">👤</div>
+      <h1>김동현</h1>
+      <p>Frontend Developer</p>
+    </div>
+    <div class="card-body">
+      <div class="section">
+        <h2>소개</h2>
+        <p>
+          안녕하세요! 저는 사용자 경험을 중시하는 프론트엔드 개발자 김동현입니다.
+          새로운 기술을 배우고, 깔끔하고 효율적인 코드를 작성하는 것을 좋아합니다.
+        </p>
+      </div>
+      <div class="section">
+        <h2>관심사</h2>
+        <div class="tags">
+          <span class="tag">Web Development</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">오픈소스</span>
+        </div>
+      </div>
+      <div class="section">
+        <h2>연락처</h2>
+        <ul class="contact-list">
+          <li>📧 <a href="mailto:kdongh0406@gmail.com">kdongh0406@gmail.com</a></li>
+          <li>🐙 <a href="https://github.com/Kimd0ng" target="_blank">github.com/Kimd0ng</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
