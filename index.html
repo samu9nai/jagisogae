@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자기소개 모음</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: Arial, 'Noto Sans KR', sans-serif;
+        background: #f7f8fb;
+        color: #1f2937;
+      }
+
+      .page {
+        width: min(100%, 1120px);
+        margin: 0 auto;
+        padding: 48px 20px 56px;
+      }
+
+      .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 44px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        background: #123f3d;
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        font-weight: 800;
+      }
+
+      .brand-text {
+        display: grid;
+        gap: 2px;
+      }
+
+      .brand-text strong {
+        font-size: 1rem;
+      }
+
+      .brand-text span {
+        color: #687383;
+        font-size: 0.9rem;
+      }
+
+      .repo-link {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #cfd8e3;
+        border-radius: 8px;
+        padding: 0 16px;
+        color: #243b53;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-decoration: none;
+        background: #ffffff;
+      }
+
+      .repo-link:hover {
+        border-color: #123f3d;
+        color: #123f3d;
+      }
+
+      .intro {
+        display: grid;
+        gap: 14px;
+        margin-bottom: 34px;
+      }
+
+      .intro h1 {
+        max-width: 760px;
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1.08;
+      }
+
+      .intro p {
+        max-width: 680px;
+        color: #536173;
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .profiles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .profile-card {
+        min-height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 28px;
+        border: 1px solid #d9e2ec;
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          border-color 160ms ease,
+          box-shadow 160ms ease,
+          transform 160ms ease;
+      }
+
+      .profile-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: 0 18px 42px rgba(31, 41, 55, 0.12);
+      }
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .avatar {
+        width: 58px;
+        height: 58px;
+        flex: 0 0 58px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #ffffff;
+        background: var(--accent);
+        font-size: 1.15rem;
+        font-weight: 800;
+      }
+
+      .profile-name {
+        display: grid;
+        gap: 4px;
+      }
+
+      .profile-name h2 {
+        font-size: 1.35rem;
+      }
+
+      .profile-name span {
+        color: var(--accent);
+        font-size: 0.94rem;
+        font-weight: 800;
+      }
+
+      .profile-card p {
+        color: #536173;
+        line-height: 1.7;
+      }
+
+      .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        color: #243b53;
+        font-size: 0.95rem;
+        font-weight: 800;
+      }
+
+      .arrow {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: color-mix(in srgb, var(--accent) 12%, white);
+        color: var(--accent);
+      }
+
+      .profile-card--donghyeon {
+        --accent: #667eea;
+      }
+
+      .profile-card--seojin {
+        --accent: #ec4899;
+      }
+
+      .profile-card--mingyu {
+        --accent: #0f766e;
+      }
+
+      @media (max-width: 860px) {
+        .profiles {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-card {
+          min-height: 230px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .page {
+          padding: 28px 14px 36px;
+        }
+
+        .top-bar {
+          align-items: flex-start;
+          flex-direction: column;
+          margin-bottom: 34px;
+        }
+
+        .repo-link {
+          width: 100%;
+        }
+
+        .intro h1 {
+          font-size: 2.25rem;
+        }
+
+        .profile-card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="top-bar" aria-label="홈 탐색">
+        <div class="brand">
+          <div class="brand-mark">J</div>
+          <div class="brand-text">
+            <strong>jagisogae</strong>
+            <span>Team introduction pages</span>
+          </div>
+        </div>
+        <a
+          class="repo-link"
+          href="https://github.com/samu9nai/jagisogae"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub 저장소
+        </a>
+      </nav>
+
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">우리들의 자기소개 페이지</h1>
+        <p>
+          팀원들이 직접 만든 자기소개 페이지를 한 곳에서 확인할 수 있습니다.
+          각자의 관심사와 개발 방향을 담은 소개를 모아둔 공간입니다.
+        </p>
+      </section>
+
+      <section class="profiles" aria-label="팀원 자기소개 링크">
+        <a
+          class="profile-card profile-card--donghyeon"
+          href="./donghyeon/"
+          aria-label="김동현 자기소개 페이지 열기"
+        >
+          <div class="profile-header">
+            <div class="avatar" aria-hidden="true">DH</div>
+            <div class="profile-name">
+              <h2>김동현</h2>
+              <span>Frontend Developer</span>
+            </div>
+          </div>
+          <p>
+            사용자 경험을 중시하며 깔끔하고 효율적인 코드를 작성하는 프론트엔드
+            개발자입니다.
+          </p>
+          <div class="card-footer">
+            <span>페이지 열기</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a
+          class="profile-card profile-card--seojin"
+          href="./seojin/"
+          aria-label="황서진 자기소개 페이지 열기"
+        >
+          <div class="profile-header">
+            <div class="avatar" aria-hidden="true">SJ</div>
+            <div class="profile-name">
+              <h2>황서진</h2>
+              <span>Developer Student</span>
+            </div>
+          </div>
+          <p>
+            새로운 것을 배우고 직접 만들어보며 편리하고 안정적인 서비스를 만드는
+            개발자를 꿈꿉니다.
+          </p>
+          <div class="card-footer">
+            <span>페이지 열기</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a
+          class="profile-card profile-card--mingyu"
+          href="./mingyu/"
+          aria-label="정민규 자기소개 페이지 열기"
+        >
+          <div class="profile-header">
+            <div class="avatar" aria-hidden="true">MG</div>
+            <div class="profile-name">
+              <h2>정민규</h2>
+              <span>Backend Developer</span>
+            </div>
+          </div>
+          <p>
+            안정적인 서버와 명확한 API를 설계하고 오래 유지할 수 있는 코드를
+            만드는 백엔드 개발자입니다.
+          </p>
+          <div class="card-footer">
+            <span>페이지 열기</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
